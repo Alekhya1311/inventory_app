@@ -13,10 +13,13 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://3.23.126.7:8000/api/login/", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "http://18.222.150.88:8000/api/login/",
+        {
+          username,
+          password,
+        }
+      );
       const { token } = response.data;
       localStorage.setItem("token", token);
       navigate("/dashboard");
