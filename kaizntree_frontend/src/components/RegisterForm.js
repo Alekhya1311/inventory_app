@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { API_URL } from "./api";
 import "./styles.css";
 
 const RegistrationForm = () => {
@@ -12,7 +13,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://18.222.150.88:8000/api/register/", {
+      await axios.post(`${API_URL}/api/register/`, {
         username,
         password,
       });

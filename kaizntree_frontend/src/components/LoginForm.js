@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "./api";
 import "./styles.css";
 
 const LoginForm = () => {
@@ -13,13 +14,10 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://18.222.150.88:8000/api/login/",
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post(`${API_URL}/api/login/`, {
+        username,
+        password,
+      });
       const { token } = response.data;
       localStorage.setItem("token", token);
       navigate("/dashboard");

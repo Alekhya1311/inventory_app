@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "./api";
 
 const DashboardPage = () => {
   const [items, setItems] = useState([]);
@@ -14,7 +15,7 @@ const DashboardPage = () => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://18.222.150.88:8000/api/items/dashboard", {
+        .get(`${API_URL}/api/items/dashboard`, {
           headers: {
             Authorization: `Token ${token}`,
           },
