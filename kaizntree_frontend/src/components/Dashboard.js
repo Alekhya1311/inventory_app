@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-import { API_URL } from "./api";
+import { API_URL } from "../api";
 
 const DashboardPage = () => {
   const [items, setItems] = useState([]);

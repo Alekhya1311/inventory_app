@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { API_URL } from "./api";
+import { API_URL } from "../api";
 import "./styles.css";
 
 const LoginForm = () => {
