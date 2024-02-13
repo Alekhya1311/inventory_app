@@ -49,8 +49,10 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    'http://*',
+    'https://*',
 ]
+
 
 # Allow all headers and methods for simplicity, but you can customize these based on your requirements
 CORS_ALLOW_ALL_ORIGINS = True
