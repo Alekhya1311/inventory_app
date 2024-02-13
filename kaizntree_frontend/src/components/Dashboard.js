@@ -14,7 +14,7 @@ const DashboardPage = () => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://127.0.0.1:8000/api/items/dashboard", {
+        .get("http://3.23.126.7:8000/api/items/dashboard", {
           headers: {
             Authorization: `Token ${token}`,
           },

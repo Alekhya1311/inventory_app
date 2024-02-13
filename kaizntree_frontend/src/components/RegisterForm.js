@@ -12,7 +12,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/register/", {
+      await axios.post("http://3.23.126.7:8000/api/register/", {
         username,
         password,
       });
